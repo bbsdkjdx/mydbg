@@ -288,13 +288,13 @@ class debugger():
             return False
         
         # Check for available slots
-        if not self.hardware_breakpoints.has_key(0):
+        if 0 not in self.hardware_breakpoints:
             available = 0
-        elif not self.hardware_breakpoints.has_key(1):
+        elif 1 not in self.hardware_breakpoints:
             available = 1
-        elif not self.hardware_breakpoints.has_key(2):
+        elif 2 not in self.hardware_breakpoints:
             available = 2
-        elif not self.hardware_breakpoints.has_key(3):
+        elif 3 not in self.hardware_breakpoints:
             available = 3
         else:
             return False
